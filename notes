@@ -1,0 +1,12 @@
+DROP TABLE table_name
+ALTER TABLE old_table_name RENAME new_table_name;
+
+ALTER TABLE j17_menu ADD COLUMN featured_up datetime DEFAULT NULL;
+ALTER TABLE j17_menu ADD COLUMN featured_down datetime DEFAULT NULL;
+
+SELECT      COLUMN_NAME AS 'ColumnName'
+            ,TABLE_NAME AS  'TableName'
+FROM        INFORMATION_SCHEMA.COLUMNS
+WHERE       COLUMN_NAME LIKE '%publish_up%'
+ORDER BY    TableName
+            ,ColumnName;
